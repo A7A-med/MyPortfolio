@@ -280,6 +280,29 @@ span { color: var(--main-color); }
     transform: scale(0.90);
 }
 
+/* 1. عرض الـ Scrollbar كله */
+::-webkit-scrollbar {
+    width: 12px; /* عرض البار */
+}
+
+/* 2. الخلفية بتاعة الـ Scrollbar (المكان اللي بيمشي فيه) */
+::-webkit-scrollbar-track {
+    background: var(--bg-color); /* بنخليه نفس لون خلفية الموقع عشان يندمج */
+}
+
+/* 3. الجزء اللي بيتحرك (الـ Handle) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--main-color)); /* تدرج لوني نيون */
+    border-radius: 10px; /* خليه دائري من الحواف */
+    border: 3px solid var(--bg-color); /* بنعمل مسافة بسيطة عشان يبان شيك */
+    box-shadow: 0 0 10px var(--main-color); /* تأثير النور */
+}
+
+/* 4. لما تحط الماوس على الـ Scrollbar ينور أكتر */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #00d9ff); /* درجة أفتح شوية من اللبني النيون */
+}
+
 ::-webkit-scrollbar {
     width: 12px;
 }
